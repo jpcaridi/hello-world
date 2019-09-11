@@ -14,3 +14,21 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+
+jar {
+    dependsOn "classes"
+
+    doFirst {
+        def classPathCollection = project.configurations.runtime.collect { it.getName() }
+        def manifestClasspath = classPathCollection.join(' ')
+
+        manifest {
+            attributes(
+                    'Specification-Vendor': "John Carid",
+                    'Implementation-Vendor': "John Caridi",
+                    'Implementation-Version': version,
+                    'Class-Path': manifestClasspath
+            )
+        }
+    }
+}
