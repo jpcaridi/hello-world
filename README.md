@@ -1,6 +1,3 @@
-# hello-world
-My first git repository
+# landon-music-lib
+This is the APIs for manipulating the music library APIs
 
-Hello All,
-
-This is my first repository on git. I'm using it to get to know how to work-it-work-it. Hopefully I will have some good ideas and good projects to work on.
